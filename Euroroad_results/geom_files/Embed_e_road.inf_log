@@ -1,0 +1,127 @@
+
+===========================================================================================
+D-Mercator: accurate embeddings of graphs in the SD space
+version: 0.9
+started on: 2025/12/22 17:21 UTC
+edgelist filename: C:\Users\Utente\Desktop\Laplacian_python\Euroroad_results\E-road.edge
+seed: 1766424077
+
+Loading edgelist......................................................................done.
+
+Checking number of connected components...............................................done.
+
+Analyzing degrees.....................................................................done.
+
+Computing local clustering............................................................done.
+
+Ordering vertices.....................................................................done.
+
+Properties of the graph
+    Nb vertices:                    1039
+    Nb edges:                       1305
+    Average degree:                 2.512
+    Minimum degree:                 1
+    Maximum degree:                 10
+    Nb of degree class:             9
+    Average clustering:             0.02154
+
+Inferring parameters...
+           beta      avg. clustering 
+         2.4825               0.4545 
+         1.7412               0.2704 
+         1.3706               0.1594 
+         1.1853               0.0936 
+         1.0927               0.0578 
+         1.0463               0.0487 
+         1.0232               0.0512 
+         1.0116               0.0491 
+WARNING: value too close to 1, using beta =      1.0058.
+                       ...............................................................done.
+
+Inferred ensemble (random positions)
+    Average degree:                 2.5120
+    Minimum degree:                 1
+    Maximum degree:                 10
+    Average clustering:             0.0491
+    Parameters
+      - beta:                       1.0058
+      - mu:                         0.0023
+      - radius_S1 (R):              165.3620
+
+Finding initial positions/ordering...
+    Building the weights matrix... Matrix built.
+
+    Computing eigenvectors using Spectra parameter ncv = 7... Convergence reached.
+
+    Sum of the angular positions (before adjustment): 11.1523
+                                     .................................................done.
+
+Refining the positions...
+    ...of vertices      [1,51]......done in 3.7050 seconds (36/51 changed position)
+    ...of vertices    [52,102]......done in 3.6960 seconds (37/51 changed position)
+    ...of vertices   [103,153]......done in 4.8040 seconds (33/51 changed position)
+    ...of vertices   [154,204]......done in 5.9730 seconds (26/51 changed position)
+    ...of vertices   [205,255]......done in 6.4070 seconds (37/51 changed position)
+    ...of vertices   [256,306]......done in 6.0940 seconds (35/51 changed position)
+    ...of vertices   [307,357]......done in 6.4240 seconds (30/51 changed position)
+    ...of vertices   [358,408]......done in 4.4630 seconds (30/51 changed position)
+    ...of vertices   [409,459]......done in 6.8010 seconds (29/51 changed position)
+    ...of vertices   [460,510]......done in 6.7770 seconds (30/51 changed position)
+    ...of vertices   [511,561]......done in 6.3140 seconds (29/51 changed position)
+    ...of vertices   [562,612]......done in 6.1160 seconds (26/51 changed position)
+    ...of vertices   [613,663]......done in 6.5050 seconds (33/51 changed position)
+    ...of vertices   [664,714]......done in 6.2150 seconds (22/51 changed position)
+    ...of vertices   [715,765]......done in 6.2670 seconds (21/51 changed position)
+    ...of vertices   [766,816]......done in 6.3720 seconds (14/51 changed position)
+    ...of vertices   [817,867]......done in 5.8030 seconds (14/51 changed position)
+    ...of vertices   [868,918]......done in 6.4160 seconds ( 0/51 changed position)
+    ...of vertices   [919,969]......done in 6.5380 seconds ( 4/51 changed position)
+    ...of vertices  [970,1020]......done in 6.0430 seconds ( 5/51 changed position)
+    ...of vertices [1021,1039]......done in 2.2690 seconds ( 2/19 changed position)
+                         .............................................................done.
+
+Updating values of kappa based on inferred positions...
+    Convergence reached after 26 iterations.
+                                                       ...............................done.
+
+    => Inferred coordinates saved to C:\Users\Utente\Desktop\Laplacian_python\Euroroad_results\Embed_e_road.inf_coord
+
+Internal parameters and options
+    ALREADY_INFERRED_PARAMETERS_FILENAME   
+    BETA_ABS_MAX                           25
+    BETA_ABS_MIN                           1.01
+    CHARACTERIZATION_MODE                  false
+    CHARACTERIZATION_NB_GRAPHS             100
+    CLEAN_RAW_OUTPUT_MODE                  false
+    CUSTOM_BETA                            false
+    CUSTOM_CHARACTERIZATION_NB_GRAPHS      false
+    CUSTOM_INFERRED_COORDINATES            false
+    CUSTOM_OUTPUT_ROOTNAME_MODE            true
+    CUSTOM_SEED                            false
+    EDGELIST_FILENAME:                     C:\Users\Utente\Desktop\Laplacian_python\Euroroad_results\E-road.edge
+    EXP_CLUST_NB_INTEGRATION_MC_STEPS      600
+    EXP_DIST_NB_INTEGRATION_STEPS          1000
+    KAPPA_MAX_NB_ITER_CONV                 500
+    KAPPA_POST_INFERENCE_MODE              true
+    MAXIMIZATION_MODE                      true
+    MIN_NB_ANGLES_TO_TRY                   100
+    NUMERICAL_CONVERGENCE_THRESHOLD_1      0.01
+    NUMERICAL_CONVERGENCE_THRESHOLD_2      5e-05
+    NUMERICAL_CONVERGENCE_THRESHOLD_3      0.5
+    NUMERICAL_ZERO                         1e-10
+    QUIET_MODE                             false
+    REFINE_MODE                            false
+    ROOTNAME_OUTPUT:                       C:\Users\Utente\Desktop\Laplacian_python\Euroroad_results\Embed_e_road
+    SEED                                   1766424077
+    VALIDATION_MODE                        false
+    VERBOSE_MODE                           false
+    VERSION                                0.9
+
+Ended on: 2025/12/22 17:23 UTC
+Elapsed CPU time (embedding):              126.2480 seconds
+    initialization:                          0.0210 seconds
+    parameters inference:                    4.2830 seconds
+    initial positions:                       0.1570 seconds
+    refining positions:                    120.0050 seconds
+    adjusting kappas:                        1.7820 seconds
+===========================================================================================
