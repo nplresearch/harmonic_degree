@@ -1,0 +1,123 @@
+
+===========================================================================================
+D-Mercator: accurate embeddings of graphs in the SD space
+version: 0.9
+started on: 2025/06/27 19:56 UTC
+edgelist filename: C:\Users\Utente\Desktop\Laplacian_python\Geometric\1\Edge_data\sif.edge
+seed: 1751054207
+
+Loading edgelist......................................................................done.
+
+Checking number of connected components...............................................done.
+
+Analyzing degrees.....................................................................done.
+
+Computing local clustering............................................................done.
+
+Ordering vertices.....................................................................done.
+
+Properties of the graph
+    Nb vertices:                    796
+    Nb edges:                       2823
+    Average degree:                 7.093
+    Minimum degree:                 1
+    Maximum degree:                 122
+    Nb of degree class:             51
+    Average clustering:             0.6351
+
+Inferring parameters...
+           beta      avg. clustering 
+         2.6463               0.6461 
+         1.8231               0.5009 
+         2.2347               0.5794 
+         2.4405               0.6217 
+         2.5434               0.6319 
+                       ...............................................................done.
+
+Inferred ensemble (random positions)
+    Average degree:                 7.0930
+    Minimum degree:                 1
+    Maximum degree:                 122
+    Average clustering:             0.6319
+    Parameters
+      - beta:                       2.5434
+      - mu:                         0.0539
+      - radius_S1 (R):              126.6873
+
+Finding initial positions/ordering...
+    Building the weights matrix... Matrix built.
+
+    Computing eigenvectors using Spectra parameter ncv = 7... Convergence reached.
+
+    Sum of the angular positions (before adjustment): 12.7062
+                                     .................................................done.
+
+Refining the positions...
+    ...of vertices     [1,39]......done in 2.1640 seconds (21/39 changed position)
+    ...of vertices    [40,78]......done in 2.1780 seconds (32/39 changed position)
+    ...of vertices   [79,117]......done in 2.1110 seconds (31/39 changed position)
+    ...of vertices  [118,156]......done in 2.8370 seconds (21/39 changed position)
+    ...of vertices  [157,195]......done in 3.0780 seconds (27/39 changed position)
+    ...of vertices  [196,234]......done in 3.1160 seconds (25/39 changed position)
+    ...of vertices  [235,273]......done in 2.9430 seconds (28/39 changed position)
+    ...of vertices  [274,312]......done in 3.7240 seconds (23/39 changed position)
+    ...of vertices  [313,351]......done in 3.4440 seconds (24/39 changed position)
+    ...of vertices  [352,390]......done in 3.7920 seconds (22/39 changed position)
+    ...of vertices  [391,429]......done in 3.3300 seconds (20/39 changed position)
+    ...of vertices  [430,468]......done in 3.3750 seconds (24/39 changed position)
+    ...of vertices  [469,507]......done in 4.0210 seconds (20/39 changed position)
+    ...of vertices  [508,546]......done in 3.9230 seconds (25/39 changed position)
+    ...of vertices  [547,585]......done in 3.4190 seconds (25/39 changed position)
+    ...of vertices  [586,624]......done in 3.2480 seconds (14/39 changed position)
+    ...of vertices  [625,663]......done in 3.3200 seconds (21/39 changed position)
+    ...of vertices  [664,702]......done in 3.5330 seconds (15/39 changed position)
+    ...of vertices  [703,741]......done in 3.3500 seconds (15/39 changed position)
+    ...of vertices  [742,780]......done in 3.5600 seconds (12/39 changed position)
+    ...of vertices  [781,796]......done in 1.4530 seconds ( 6/16 changed position)
+                         .............................................................done.
+
+Updating values of kappa based on inferred positions...
+    Convergence reached after 29 iterations.
+                                                       ...............................done.
+
+    => Inferred coordinates saved to C:\Users\Utente\Desktop\Laplacian_python\Geometric\1\Embed_data\Embed_sif.inf_coord
+
+Internal parameters and options
+    ALREADY_INFERRED_PARAMETERS_FILENAME   
+    BETA_ABS_MAX                           25
+    BETA_ABS_MIN                           1.01
+    CHARACTERIZATION_MODE                  false
+    CHARACTERIZATION_NB_GRAPHS             100
+    CLEAN_RAW_OUTPUT_MODE                  false
+    CUSTOM_BETA                            false
+    CUSTOM_CHARACTERIZATION_NB_GRAPHS      false
+    CUSTOM_INFERRED_COORDINATES            false
+    CUSTOM_OUTPUT_ROOTNAME_MODE            true
+    CUSTOM_SEED                            false
+    EDGELIST_FILENAME:                     C:\Users\Utente\Desktop\Laplacian_python\Geometric\1\Edge_data\sif.edge
+    EXP_CLUST_NB_INTEGRATION_MC_STEPS      600
+    EXP_DIST_NB_INTEGRATION_STEPS          1000
+    KAPPA_MAX_NB_ITER_CONV                 500
+    KAPPA_POST_INFERENCE_MODE              true
+    MAXIMIZATION_MODE                      true
+    MIN_NB_ANGLES_TO_TRY                   100
+    NUMERICAL_CONVERGENCE_THRESHOLD_1      0.01
+    NUMERICAL_CONVERGENCE_THRESHOLD_2      5e-05
+    NUMERICAL_CONVERGENCE_THRESHOLD_3      0.5
+    NUMERICAL_ZERO                         1e-10
+    QUIET_MODE                             false
+    REFINE_MODE                            false
+    ROOTNAME_OUTPUT:                       C:\Users\Utente\Desktop\Laplacian_python\Geometric\1\Embed_data\Embed_sif
+    SEED                                   1751054207
+    VALIDATION_MODE                        false
+    VERBOSE_MODE                           false
+    VERSION                                0.9
+
+Ended on: 2025/06/27 19:58 UTC
+Elapsed CPU time (embedding):               73.9110 seconds
+    initialization:                          0.0220 seconds
+    parameters inference:                    6.8700 seconds
+    initial positions:                       0.1230 seconds
+    refining positions:                     65.9220 seconds
+    adjusting kappas:                        0.9740 seconds
+===========================================================================================
