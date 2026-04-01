@@ -161,16 +161,16 @@ Each notebook is self-contained: imports the package, loads data from `../data/`
 
 Copied from existing `Data/` directory, only the files needed by the 6 notebooks:
 
-| File | Source in `Data/` | Used by |
-|------|------------------|---------|
-| `euroroad.edgelist` | `out.subelj_euroroad_euroroad` | Notebook 1 |
-| `netscience.edgelist` | `out.dimacs10-netscience-netscience.txt` or similar | Notebooks 3, 6 |
-| `facebook.edgelist` | `out.ego-facebook.txt` or similar | Notebook 3 |
-| `celegans.edgelist` | `out.metabolic-celegans.txt` or similar | Notebooks 3, 6 |
-| `tortoise.edgelist` | corresponding file in `Data/` | Notebook 6 |
-| `thiers13.json` | `Higher_Order/random_Thiers13_*.json` | Notebook 5 |
+| File | Source path (relative to repo root) | Used by |
+|------|--------------------------------------|---------|
+| `out.subelj_euroroad_euroroad` | `Data/out.subelj_euroroad_euroroad` | Notebook 1 |
+| `out.dimacs10-netscience` | `Data/out.dimacs10-netscience` | Notebooks 3, 6 |
+| `out.ego-facebook` | `Data/out.ego-facebook` | Notebook 3 |
+| `out.dimacs10-celegans_metabolic` | `Data/out.dimacs10-celegans_metabolic` | Notebooks 3, 6 |
+| `reptilia-tortoise-network-fi.edges` | `Data/reptilia-tortoise-network-fi/reptilia-tortoise-network-fi.edges` | Notebook 6 |
+| `random_10_0.85min_cliques_Thiers13.json` | `Higher_Order/random_10_0.85min_cliques_Thiers13.json` | Notebook 5 |
 
-Exact source filenames to be confirmed by reading existing notebook loading code.
+Files are copied with their original names to preserve compatibility with `import_network_data()`.
 
 ### `data/precomputed/` — result pickles
 
