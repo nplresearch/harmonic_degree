@@ -17,6 +17,13 @@ dependencies = [
 
 [project.optional-dependencies]
 notebooks = ["jupyter", "pandas"]
+test = ["pytest>=7.0"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+]
