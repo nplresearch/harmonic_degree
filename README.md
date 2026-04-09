@@ -1,35 +1,90 @@
-**Harmonic Morphisms and dynamical invariants in network renormalization**
+# Harmonic Morphisms and Dynamical Invariants in Network Renormalization
 
-Hi, this repository provides the code to calulcate the Harmonic degree (and realted measures) to network coarse-grainings. 
-The main functions is **Harmonic_degree.py**, which implements the harmonic degree computation of a given clustering.
-Other functions are:
-- Higher_order_harmonic_degree.py: implements generalized higher-order Laplacian renormalization and harmonic degree for higher-order networks.
-- HOLR_functions.py: used for Laplacian Renormalization and Higher Order. Taken from https://github.com/nplresearch/higher_order_LRG.
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg) ![Tests](https://img.shields.io/badge/tests-78%20passed-brightgreen.svg)
 
+This repository provides code and data accompanying Guadagnuolo et al. (2026). We prove that discrete harmonic morphisms exactly characterize coarse-grainings that preserve random-walk dynamics across network scales. The code implements the harmonic degree diagnostic and applies it to geometric, Laplacian, and GNN-based renormalization across 50 real-world networks.
 
-The folders are:
-- Data: Contains data used in the experiments 
-- Clustering: Experiments with clustering methods
-- Euroroad_results: contains the full renormalization group analysis done over a network, in this case the Euroroad network. We perform all the three renormalization methods and calculate the harmonic degree curves. Reproducing part of the plots shown in the paper. 
-- Geometric\1: contains further experiments with Geometric Renormalization. Please note that to use it is essential to use also https://github.com/networkgeometry/d-mercator and https://github.com/zhmh163/Geometric-renormalization-of-weighted-network. 
-- Laplacian: contains further experiments with Laplacian Renormalization + Equilibrium Laplacian. 
-- GNN_partition_function: contains futher experiments with GNN-based Renormalization, it contains also some code taken from https://www.nature.com/articles/s41467-025-56034-2.
-- Higher_Order: Generalized Laplacian Renormalization Scheme + analysis of the harmonic morphisms on adjacency and parallel adjacency graphs + Equilibrium Higher-Order Laplacian
-- Finding_harmonic_Morph: codes with techniques we tried to find harmonic morphisms
+## Quick Start
 
-**Please note that the preprocessing of data is done in Clustering->GT_Tools_producing_data->Preprocessing_and_SBM_creations.ipynb".**
-Processed data are then stored in **Intermediate_outputs** folders, stored in 7 groups for readibility. Then processed data are directly used in all the jupyter of the notebooks. 
-More specifically, the Clustering folder is organized as follows: 
-- **GT_Tools_producing_data** described above
-- **Visualizations_UMAP** that contains the codes to produce the plots regarding the UMAP described in the supplementary. In particular **Visualize_NetSci_Embeddings.ipynb** produces data stored in **Classical Summaries**.
-- **Clustering_examples.ipynb** contains the clustering plots shown in the paper. 
-- **Producing_Harmonic_degree_clustering.ipynb** produces the harmonic degree tables that are stored in **Final_outputs** and then visualized in the UMAP codes. 
+```bash
+pip install -r requirements.txt
+cd harmonic_morphisms && pip install -e .
+pytest tests/ -v  # 78 tests
+```
 
+## Repository Structure
 
-Very specific functions and methods (i.e. Harmonic degree on parallel adjacency graph and Equilibrium diffusion) are implemented in the realted jupyter notebooks, and they will be outlined. 
+```
+├── Harmonic_degree.py                   # Core harmonic degree computation
+├── Higher_order_harmonic_degree.py      # Hodge Laplacian extension
+├── HOLR_functions.py                    # Higher-order utilities
+├── harmonic_morphisms/                  # Installable Python package (refactored API)
+│   ├── src/                             # Package source
+│   ├── tests/                           # 78 unit tests
+│   └── notebooks/                       # Figure reproduction notebooks
+├── Data/                                # 50 network datasets (see Data/NETWORKS.md)
+├── Clustering/                          # Clustering benchmark (50 networks × 5 methods)
+├── Euroroad_results/                    # Complete RG analysis of Euro-Road network
+├── Geometric/                           # Geometric renormalization (requires d-mercator)
+├── Laplacian/                           # Laplacian + Equilibrium Laplacian RG
+├── GNN_partition_function/              # GNN-based renormalization (requires PyTorch)
+├── Higher_Order/                        # Higher-order simplicial complex analysis
+├── Finding_harmonic_Morph/              # Harmonic morphism search algorithms
+├── pre_computed_measures/               # Pre-computed results for 16-network comparison
+└── plot_average.ipynb                   # Average fingerprint curves
+```
 
-Data are taken from https://networkrepository.com/ , https://snap.stanford.edu/ and https://snap.stanford.edu/biodata/. We stored them in Clustering/GT_Tools_producing_data/Data
+## Reproducing Paper Figures
 
-For any question please write to francesco.guadagnuolo@epfl.ch
+The 6 notebooks in `harmonic_morphisms/notebooks/` reproduce the main results. For the full figure-to-notebook mapping see `harmonic_morphisms/docs/paper_figures.md`. Figures involving geometric renormalization require d-mercator; GNN figures require PyTorch Geometric.
 
+## Core API
 
+```python
+from Harmonic_degree import H_CF_cluster
+import networkx as nx
+
+G = nx.karate_club_graph()
+clusters = {n: n % 4 for n in G.nodes()}  # example partition
+results = H_CF_cluster(G, clusters)
+print(f"H_mod = {results[1]:.3f}")
+```
+
+## Data
+
+See `Data/NETWORKS.md` for the complete manifest of 50 networks.
+
+## External Dependencies
+
+| Tool | Used for | Install |
+|------|----------|---------|
+| [d-mercator](https://github.com/networkgeometry/d-mercator) | Geometric renormalization | See repo README |
+| [graph-tool](https://graph-tool.skewed.de/) | SBM inference for clustering | `conda install -c conda-forge graph-tool` |
+| [PyTorch Geometric](https://pyg.org/) | GNN renormalization | `pip install torch torch_geometric` |
+
+## Tests
+
+```bash
+cd harmonic_morphisms && pytest tests/ -v
+```
+
+78 tests covering core algorithms, higher-order extensions, and integration.
+
+## Citation
+
+```bibtex
+@article{guadagnuolo2026harmonic,
+  title={Harmonic morphisms and dynamical invariants in network renormalization},
+  author={Guadagnuolo, Francesco Maria and Nurisso, Marco and Galluzzi, Federica and Allard, Antoine and Petri, Giovanni},
+  journal={Physical Review X},
+  year={2026}
+}
+```
+
+## License
+
+MIT. See LICENSE.
+
+## Contact
+
+francesco.guadagnuolo@epfl.ch
