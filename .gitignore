@@ -27,3 +27,9 @@ Thumbs.db
 *.log
 *.bbl
 *.blg
+
+# Internal / development files
+docs/
+S1H2_experiment/
+.claude/
+.remember/
