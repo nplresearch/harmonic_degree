@@ -8,7 +8,7 @@ Code and data accompanying:
 
 > **Harmonic morphisms and dynamical invariants in network renormalization**  
 > F. M. Guadagnuolo, M. Nurisso, F. Galluzzi, A. Allard, G. Petri  
-> *Physical Review X*, 2026
+> *Arxiv*, 2026
 
 We show that discrete harmonic morphisms — surjective graph maps that preserve harmonic functions — exactly characterize coarse-grainings that maintain first-exit random-walk dynamics across scales. The **harmonic degree** is a scalar diagnostic that measures how closely any coarse-graining approximates a harmonic morphism. We apply this to three renormalization methods (geometric, Laplacian, GNN-based) across 50 real-world networks, revealing characteristic dynamical fingerprints and discovering that Laplacian renormalization spontaneously produces *exact* harmonic morphisms in certain networks.
 
