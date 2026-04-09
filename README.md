@@ -222,7 +222,7 @@ Some analyses require separate installation:
   title   = {Harmonic morphisms and dynamical invariants in network renormalization},
   author  = {Guadagnuolo, Francesco Maria and Nurisso, Marco and Galluzzi, Federica
              and Allard, Antoine and Petri, Giovanni},
-  journal = {Physical Review X},
+  journal = {Arxiv},
   year    = {2026}
 }
 ```
@@ -235,4 +235,6 @@ MIT. See [LICENSE](LICENSE).
 
 ## Contact
 
-Francesco Maria Guadagnuolo — francesco.guadagnuolo@epfl.ch
+Francesco Maria Guadagnuolo — francesco.guadagnuolo@epfl.ch 
+Giovanni Petri — g.petri@northeastern.edu
+

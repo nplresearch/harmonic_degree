@@ -3,7 +3,7 @@ message: "If you use this software, please cite it as below."
 type: software
 title: "Harmonic morphisms and dynamical invariants in network renormalization"
 license: MIT
-repository-code: "https://github.com/PLACEHOLDER/harmonic-morphisms"
+repository-code: "https://github.com/nplresearch/harmonic_degree"
 authors:
   - family-names: Guadagnuolo
     given-names: Francesco Maria
