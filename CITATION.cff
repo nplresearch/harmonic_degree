@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Harmonic morphisms and dynamical invariants in network renormalization"
+license: MIT
+repository-code: "https://github.com/PLACEHOLDER/harmonic-morphisms"
+authors:
+  - family-names: Guadagnuolo
+    given-names: Francesco Maria
+    affiliation: "EPFL, Lausanne, Switzerland"
+  - family-names: Nurisso
+    given-names: Marco
+    affiliation: "Politecnico di Torino, Italy"
+  - family-names: Galluzzi
+    given-names: Federica
+    affiliation: "Università di Torino, Italy"
+  - family-names: Allard
+    given-names: Antoine
+    affiliation: "Université Laval, Québec, Canada"
+  - family-names: Petri
+    given-names: Giovanni
+    affiliation: "Northeastern University London, UK"
+    orcid: "https://orcid.org/0000-0003-1847-5031"
+preferred-citation:
+  type: article
+  title: "Harmonic morphisms and dynamical invariants in network renormalization"
+  journal: "Physical Review X"
+  year: 2026
+  authors:
+    - family-names: Guadagnuolo
+      given-names: Francesco Maria
+      affiliation: "EPFL, Lausanne, Switzerland"
+    - family-names: Nurisso
+      given-names: Marco
+      affiliation: "Politecnico di Torino, Italy"
+    - family-names: Galluzzi
+      given-names: Federica
+      affiliation: "Università di Torino, Italy"
+    - family-names: Allard
+      given-names: Antoine
+      affiliation: "Université Laval, Québec, Canada"
+    - family-names: Petri
+      given-names: Giovanni
+      affiliation: "Northeastern University London, UK"
+      orcid: "https://orcid.org/0000-0003-1847-5031"
